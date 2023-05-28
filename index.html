@@ -6,15 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="/front/css/style.css">
+    <link rel="stylesheet" href="/front/css/util.css">
     <link rel="stylesheet" href="/front/materialize-v1.0.0/materialize/css/materialize.min.css">
     <title>Document</title>
 </head>
 <body>
     
     <nav>
-    <div class="nav-wrapper">
-      <a href="#!" class="brand-logo">Logo</a>
-      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+    <div class="white z-depth-0">
+      <a href="#!" class="blue-text">Home</a>
+      <a href="#" data-target="mobile-demo" class="sidenav-trigger blue-text"><i class="material-icons">menu</i></a>
       <ul class="right hide-on-med-and-down">
         <li><a href="sass.html">Sass</a></li>
         <li><a href="badges.html">Components</a></li>
@@ -25,10 +26,34 @@
   </nav>
 
   <ul class="sidenav" id="mobile-demo">
-    <li><a href="sass.html">Sass</a></li>
-    <li><a href="badges.html">Components</a></li>
-    <li><a href="collapsible.html">Javascript</a></li>
-    <li><a href="mobile.html">Mobile</a></li>
+
+    <li>
+        <div class="user-view">
+        <div class="background">
+          <img src="/front/image/office.jpg" class="w-full">
+        </div>
+        <a href="#user"><img class="circle" src="/front/image/3.jpg"></a>
+        <a href="#name"><span class="white-text name">maede shobeiri</span></a>
+        <a href="#email"><span class="white-text email">maedehshobeiri@gmail.com</span></a>
+      </div>
+    </li>
+      <li>
+        <a href="https://www.youtube.com/channel/UC7_WFOLcQ4*9HCat_pE3hcA">
+        <i class="material-icons">insert_link</i>
+         AQ Fast Learn
+        </a>
+    </li>
+      <li>
+        <a href="https://codeyad.com">
+        <i class="material-icons">insert_link</i>
+        Codeyad
+    </a>
+</li>
+      <li><div class="divider"></div></li>
+      <li><a class="subheader">pages</a></li>
+      <li><a class="waves-effect" href="#!">Home</a></li>
+      <li><a class="waves-effect" href="#!">User</a></li>
+
   </ul>
 
     <script src="/front/materialize-v1.0.0/materialize/js/materialize.min.js"></script>
