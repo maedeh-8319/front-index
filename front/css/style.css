@@ -2,11 +2,17 @@
     .top_navbar{
         box-shadow: 0 0 50px gray !important;
     }
-
+    
     #top_actions_section{
         display: flex !important;
         align-items: center !important;
     }
-    
+}
 
+.users_list_item.active .users_list_arrow_icon{
+    transform: rotate(180deg);
+}
+
+.users_list_item.active , .users_list_item.active .collapsible-header{
+    background-color: rgba(190, 185, 185, 0.322);
 }

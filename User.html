@@ -59,7 +59,7 @@
 
 
   <!-- content section ---------start-------------------- -->
-  <section id="top_actions_section" class="row">
+  <section id="top_actions_section" class="row m-b-0">
   <!-- add Button _________ -->
   <div class="p-l-10 p-r-10 p-t-10 col s12 m3 l2">
     <button class="waves-effect waves-light btn blue darken-2 p-l-30 w-full rounded_border flex-c ">
@@ -68,7 +68,7 @@
     </button>
   </div> 
   <!-- search section____________ -->  
-  <div class="row col s12 m9 l8">
+  <div class="row col s12 m9 l8 m-b-5">
     <div class="input-field col s12">
       <input id="search" type="text" class="validate">
       <label for="search">
@@ -76,9 +76,37 @@
         search</label>
     </div>
   </div>
+  <div class="col l2 hide-on-med-and-dow"></div>
+  </section>
 
-
-  <div class="col s12 hide-on-med-and-dow"></div>
+  <section class="user_list_section">
+    <ul class="collapsible">
+      <li class="users_list_item">
+        <div class="collapsible-header">
+          <i class="material-icons blue-text darken-2 users_list_arrow_icon trans-0-2">arrow_drop_down_circle</i>
+          maedeh
+        </div>
+        <div class="collapsible-body">
+          <div class="p-all-5">
+            <span class="f-bold"> Username : </span>
+            <span>maedeh</span>
+          </div>
+            <div class="p-all-5">
+              <span class="f-bold"> Email : </span>
+              <span>maedehshobeiri@gmail.com</span>
+            </div>
+            <div class="p-all-5">
+              <span class="f-bold"> Address : </span>
+              <span>brlian - example street ...</span>
+            </div>
+            <div class="p-all-5">
+              <span class="f-bold"> Action : </span>
+            <i class="material-icons red-text m-l-5 m-r-5">delete_forever</i>
+            <i class="material-icons orange-text darken-3 m-l-5 m-r-5">edit</i>             
+          </div>
+          </div>
+      </li>
+    </ul>
   </section>
    <!-- content section ---------end------- -->
 
@@ -86,5 +114,6 @@
 
     <script src="/front/materialize-v1.0.0/materialize/js/materialize.min.js"></script>
     <script src="/front/js/app.js"></script>
+    <script src="/front/js/users.js"></script>
 </body>
 </html>
