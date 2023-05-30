@@ -6,28 +6,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-
-    console.log(1);
-    new Promise(
-      function(resolve,reject){
-      setTimeout(function() {
-        console.log(2);
-        resolve(3);
-        reject("not ok ...!");
-      },1000)  
-
-     }
-
-    ).then(
-    function(response){
-    console.log(response);
-    console.log(3)
-     }
-    ).catch(
-      function(error){
-        console.log(error)
-      }
-    )
+  fetch('https://jsonplaceholder.typicode.com/posts/1')
+  .then((response) => response.json())
+  .then((json) => console.log(json));
 
  
 
