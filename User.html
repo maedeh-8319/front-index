@@ -230,11 +230,7 @@
   </section>
 
 
-  <section id="test_section" class="grey" x-data="{message: 'I Love Programming' , names: ['maedeh','ali','mohammad'] ,
-   testfunc: ()=>{
-    alert(this.message)
-  }
-}">
+  <section id="test_section" class="grey" x-data="mainData()">
     1111
     <span x-text="message" class="red"></span>
     <button class="btn" x-on:click="testfunc()">click</button>
@@ -278,7 +274,8 @@
 
    <!-- content section ---------end------- -->
 
-   
+   <script src="/front/js/axios.js"></script>
+    <script src="/front/js/alpinejscontollers/manicontollores.js"></script>
     <script defer src="/front/js/alpine.js"></script>
     <script src="/front/materialize-v1.0.0/materialize/js/materialize.min.js"></script>
     <script src="/front/js/app.js"></script>
