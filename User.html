@@ -8,19 +8,18 @@
     <link rel="stylesheet" href="/front/css/style.css">
     <link rel="stylesheet" href="/front/css/util.css">
     <link rel="stylesheet" href="/front/materialize-v1.0.0/materialize/css/materialize.min.css">
-    <link rel="stylesheet" href="/front/materialize-v1.0.0/materialize/css/materialize-rtl.css">
     <link rel="icon"type="image/x-icon" href="/front/image/codeyad.png">
     <title>Document</title>
 </head>
-<body dir="rtl">
+<body>
    <!-- navbar section ---------start-------------------- -->
     <nav class="white z-depth-0  top_navbar">
     <div class="nav-wrapper">
       <a href="#!" class="blue-text hide-on-med-and-up">User Managment</a>
-      <a href="#" data-target="mobile-demo" class="sidenav-trigger blue-text right"><i class="material-icons">menu</i></a>
-      <ul class="hide-on-med-and-down dis-flex">
+      <a href="#" data-target="mobile-demo" class="sidenav-trigger blue-text "><i class="material-icons">menu</i></a>
+      <ul class="hide-on-med-and-down">
         <li><a href="/" class="blue-text">Home</a></li>
-        <li><a href="/User.html" class="blue-text">User Managmentv</a></li>
+        <li><a href="/User.html" class="blue-text">User Managment</a></li>
         <li><a href="httpt://codeyad.com" class="blue-text">codeyad</a></li>
         <li><a href="https://www.youtube.com/channel/UC7_WFOLcQ4x9HCat_pE3hcA" class="blue-text">AQ fast learn</a></li>
       </ul>
@@ -41,13 +40,13 @@
     </li>
       <li>
         <a href="https://www.youtube.com/channel/UC7_WFOLcQ4*9HCat_pE3hcA">
-        <i class="material-icons right sidenav_link_icon">insert_link</i>
+        <i class="material-icons">insert_link</i>
          AQ Fast Learn
         </a>
     </li>
       <li>
         <a href="https://codeyad.com">
-        <i class="material-icons right sidenav_link_icon">insert_link</i>
+        <i class="material-icons">insert_link</i>
         Codeyad
     </a>
 </li>
@@ -151,8 +150,8 @@
           </tr>
         </thead>
 
-        <tbody>
-          <tr>
+        <tbody class="desktop_table_body">
+        <tr>
             <td>1</td>
             <td>Maedeh shobeiri</td>
             <td>maedeh-8319</td>
@@ -165,6 +164,7 @@
               </i>
             </td>
           </tr>
+          
           <tr>
             <td>2</td>
             <td>Maedeh shobeiri</td>
@@ -220,14 +220,27 @@
       </div>
 
       <div class="pagination_buttons">
-        <i class="material-icons blue darken-2 m-l-5 m-r-5 p-l-5 p-r-5 p-t-1 p-b-3 waves-effect waves-light white-text rounded_pill">keyboard_arrow_right</i>
         <i class="material-icons blue darken-2 m-l-5 m-r-5 p-l-5 p-r-5 p-t-1 p-b-3 waves-effect waves-light white-text rounded_pill">keyboard_arrow_left</i>
+        <i class="material-icons blue darken-2 m-l-5 m-r-5 p-l-5 p-r-5 p-t-1 p-b-3 waves-effect waves-light white-text rounded_pill">keyboard_arrow_right</i>
       </div>
 
     </div>
 
 
   </section>
+
+
+  <section id="test_section" class="grey" x-data="{message: 'I Love Programming' , names: ['maedeh','ali','mohammad'] ,
+   testfunc: ()=>{
+    alert(this.message)
+  }
+}">
+    1111
+    <span x-text="message" class="red"></span>
+    <button class="btn" x-on:click="testfunc()">click</button>
+  </section>
+
+
 
   <div class="add_user_modal_back dis-none"></div>
   <div class="add_user_modal container rounded_top_30 trans-0-3">
@@ -266,7 +279,7 @@
    <!-- content section ---------end------- -->
 
    
-
+    <script defer src="/front/js/alpine.js"></script>
     <script src="/front/materialize-v1.0.0/materialize/js/materialize.min.js"></script>
     <script src="/front/js/app.js"></script>
     <script src="/front/js/users.js"></script>
