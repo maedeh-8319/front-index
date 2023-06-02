@@ -11,7 +11,7 @@
     <link rel="icon"type="image/x-icon" href="/front/image/codeyad.png">
     <title>Document</title>
 </head>
-<body>
+<body x-data="usersData">
    <!-- navbar section ---------start-------------------- -->
     <nav class="white z-depth-0  top_navbar">
     <div class="nav-wrapper">
@@ -80,7 +80,7 @@
   <div class="col l2 hide-on-med-and-dow"></div>
   </section>
 
-  <section class="user_list_section">
+  <section class="user_list_section"  x-init="getUsers()">
     <ul class="collapsible hide-on-med-and-up">
       <li class="users_list_item">
         <div class="collapsible-header">
@@ -151,59 +151,21 @@
         </thead>
 
         <tbody class="desktop_table_body">
-        <tr>
-            <td>1</td>
-            <td>Maedeh shobeiri</td>
-            <td>maedeh-8319</td>
-            <td>maedehshobeiri@gmail.com</td>
-            <td>berlian - example street ... </td>
-            <td>
-              <i class="material-icons orange-text darken-3 m-l-5 m-r-5 hov-pointer">edit</i>
-              <i class="material-icons red-text m-l-5 m-r-5 hov-pointer">
-                delete_forever
-              </i>
-            </td>
-          </tr>
-          
-          <tr>
-            <td>2</td>
-            <td>Maedeh shobeiri</td>
-            <td>maedeh-8319</td>
-            <td>maedehshobeiri@gmail.com</td>
-            <td>berlian - example street ... </td>
-            <td>
-              <i class="material-icons orange-text darken-3 m-l-5 m-r-5 hov-pointer">edit</i>
-              <i class="material-icons red-text m-l-5 m-r-5 hov-pointer">
-                delete_forever
-              </i>
-            </td>
-          </tr>
-          <tr>
-            <td>3</td>
-            <td>Maedeh shobeiri</td>
-            <td>maedeh-8319</td>
-            <td>maedehshobeiri@gmail.com</td>
-            <td>berlian - example street ... </td>
-            <td>
-              <i class="material-icons orange-text darken-3 m-l-5 m-r-5 hov-pointer">edit</i>
-              <i class="material-icons red-text m-l-5 m-r-5 hov-pointer">
-                delete_forever
-              </i>
-            </td>
-          </tr>
-          <tr>
-            <td>4</td>
-            <td>Maedeh shobeiri</td>
-            <td>maedeh-8319</td>
-            <td>maedehshobeiri@gmail.com</td>
-            <td>berlian - example street ... </td>
-            <td>
-              <i class="material-icons orange-text darken-3 m-l-5 m-r-5 hov-pointer">edit</i>
-              <i class="material-icons red-text m-l-5 m-r-5 hov-pointer">
-                delete_forever
-              </i>
-            </td>
-          </tr>
+          <template x-for="user in users">
+            <tr>
+              <td x-text="user.id"></td>
+              <td x-text="user.name"></td>
+              <td x-text="user.username"></td>
+              <td x-text="user.email"></td>
+              <td x-text="user.address.city+' - '+user.address.street"></td>
+              <td>
+                <i class="material-icons orange-text darken-3 m-l-5 m-r-5 hov-pointer">edit</i>
+                <i class="material-icons red-text m-l-5 m-r-5 hov-pointer">
+                  delete_forever
+                </i>
+              </td>
+            </tr>
+          </template>
         </tbody>
       </table>
     </div>
@@ -228,14 +190,6 @@
 
 
   </section>
-
-
-  <section id="test_section" class="grey" x-data="mainData()">
-    1111
-    <span x-text="message" class="red"></span>
-    <button class="btn" x-on:click="testfunc()">click</button>
-  </section>
-
 
 
   <div class="add_user_modal_back dis-none"></div>
@@ -275,7 +229,7 @@
    <!-- content section ---------end------- -->
 
    <script src="/front/js/axios.js"></script>
-    <script src="/front/js/alpinejscontollers/manicontollores.js"></script>
+    <script src="/front/js/alpinejscontollers/userscontollores.js"></script>
     <script defer src="/front/js/alpine.js"></script>
     <script src="/front/materialize-v1.0.0/materialize/js/materialize.min.js"></script>
     <script src="/front/js/app.js"></script>
