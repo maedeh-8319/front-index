@@ -58,7 +58,6 @@
   </ul>
    <!-- navbar section ---------end------- -->
 
-
   <!-- content section ---------start-------------------- -->
   <section id="top_actions_section" class="row m-b-0 container">
   <!-- add Button _________ -->
@@ -71,11 +70,12 @@
   </div> 
   <!-- search section____________ -->  
   <div class="row col s12 m9 l8 m-b-5">
-    <div class="input-field col s12">
-      <input id="search" type="text" class="validate">
+    <div class="input-field col s12" x-init="$watch('searchChar', (value)=>handleSearch(value))">
+      <input id="search" type="text" class="validate" x-model="searchChar">
       <label for="search">
         <i class="material-icons pos-relative top-7">search</i>
-        search</label>
+        search
+      </label>
     </div>
   </div>
   <div class="col l2 hide-on-med-and-dow"></div>
